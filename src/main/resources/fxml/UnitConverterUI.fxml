@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #e0bbe4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unitConverter.UnitConverterController">
+   <top>
+      <MenuBar fx:id="menuBar" prefHeight="30.0" prefWidth="596.0" style="-fx-background-color: #e7d3ee;" BorderPane.alignment="CENTER_LEFT">
+        <menus>
+            <Menu mnemonicParsing="false" text="[ File ]">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleBackHome" text="Home" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleCurrencyConverter" text="Currency Converter" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowInfo" text="How to use?" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="[ Unit Type ]">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleUnitSelected" text="Length" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleUnitSelected" text="Temperature" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleUnitSelected" text="Weight" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleUnitSelected" text="Volume" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane>
+         <children>
+            <HBox alignment="CENTER" layoutY="9.0" prefHeight="70.0" prefWidth="500.0" spacing="25.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="input1" onAction="#handleConvert" onMousePressed="#handleTextFieldPressed" prefHeight="40.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font></TextField>
+                  <ComboBox fx:id="unitbox1" prefHeight="40.0" prefWidth="200.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="convert" layoutX="91.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleConvert" prefHeight="40.0" prefWidth="150.0" text="Covert">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="clear" layoutX="260.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="40.0" prefWidth="150.0" text="Clear">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="194.0" layoutY="85.0" text="... equals to ...">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutY="116.0" prefHeight="70.0" prefWidth="500.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="input2" onAction="#handleConvert" onMousePressed="#handleTextFieldPressed" prefHeight="40.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font></TextField>
+                  <ComboBox fx:id="unitbox2" prefHeight="40.0" prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

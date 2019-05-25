@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #f7ebc3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="currencyConverter.CurrencyConverterController">
+   <top>
+      <MenuBar fx:id="menuBar" style="-fx-background-color: #fffac8;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="[ File ]">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleBackHome" text="Home" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleUnitConvert" text="Unit Converter" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowInfo" text="How to use?" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="300.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutY="10.0" prefHeight="70.0" prefWidth="500.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="input1" alignment="CENTER" onAction="#handleConvert" onMousePressed="#handleTextFieldPressed" prefHeight="40.0" prefWidth="200.0" promptText="- Input -">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="THB: Thai Baht">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Label layoutX="194.0" layoutY="87.0" text="... equals to ..." textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutY="119.0" prefHeight="70.0" prefWidth="500.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="input2" alignment="CENTER" editable="false" onAction="#handleConvert" onMousePressed="#handleTextFieldPressed" prefHeight="40.0" prefWidth="200.0" promptText="- Result -">
+                     <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="unitbox1" prefHeight="40.0" prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="convert" layoutX="89.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleConvert" prefHeight="40.0" prefWidth="150.0" text="Convert">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="clear" layoutX="262.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="40.0" prefWidth="150.0" text="Clear">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

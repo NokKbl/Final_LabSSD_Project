@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #bed7d1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeandinfo.InfoController">
+   <center>
+      <TabPane prefHeight="250.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab style="-fx-background-color: #6fc0ab;" text="How to use &quot;Unit Converter&quot; ?">
+            <content>
+                  <VBox spacing="13.0">
+                     <children>
+                        <Label text="1) Click [ Unit Type ] in menu bar to select unit to covert.">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="2) Select base unit (Top) and unit to convert to (Bottom).">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="3) Input number that want to convert in text field (Top one).">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="4) Click &quot;Convert&quot; button OR press Enter to convert.">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="&gt;&gt; There're 2 ways to clear text field:" wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Press &quot;Clear&quot; button  OR  click at text field 1 time.">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="25.0" right="5.0" top="15.0" />
+                     </padding>
+                  </VBox>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #6fc0ab;" text="How to use &quot;Currency Converter&quot; ?">
+               <content>
+                  <VBox spacing="17.0">
+                     <children>
+                        <Label text="1) Select currency unit that want to convert to.">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="2) Input amount of Thai Baht (THB) that want to convert in text field.">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="3) Click &quot;Convert&quot; button OR press Enter to convert.">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="4) Get your result :)">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="&gt;&gt; Clear text field by click &quot;Clear&quot; button  OR  click text field 1 time." wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="25.0" right="5.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="500.0" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="unitconvert" mnemonicParsing="false" onAction="#handleStartConvert" prefWidth="160.0" style="-fx-background-color: #e0bbe4; -fx-border-color: #65365a;" text="Unit Converter">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backhome" mnemonicParsing="false" onAction="#handleBackHome" prefWidth="70.0" style="-fx-background-color: #fbd6c6; -fx-border-color: #e32270;" text="Home">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="currencyconvert" mnemonicParsing="false" onAction="#handleCurrencyConverter" prefWidth="160.0" style="-fx-background-color: #f7ebc3; -fx-border-color: #f0c38f;" text="Currency Converter">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
