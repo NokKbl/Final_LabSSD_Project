@@ -3,7 +3,7 @@
 **Table of Contents**
 - [About this Application](#about-this-application)
 - [Design Patterns](#design-patterns)
-- [How to use?](#how-to-use?)
+- [How to use?](#how-to-use)
 - [Contributor](#contributor)
 
 ## About this Application
@@ -33,7 +33,7 @@
 
 ![factory](img/factory.png)
 
-## How to use?
+## How to use
 
 Since my app doesn't have .jar file to run, then you can download/clone this project and run `Main.java` file.
 
